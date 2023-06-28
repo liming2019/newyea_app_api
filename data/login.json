@@ -1,0 +1,13 @@
+{
+  "test_get_cms_code": [
+    {"desc": "手机号格式正确，获取验证码成功","phone": "17817357310","status_code": 200,"code": "200"},
+    {"desc": "手机号为空，获取验证码失败","phone": "","status_code": 200,"code": "400","text": "手机号不能为空"},
+    {"desc": "手机号格式错误，获取验证码失败","phone": "178173","status_code": 200,"code": "400","text": "手机号码不正确"}
+  ],
+  "test_login": [
+    {"desc": "手机号和验证码匹配，登录成功","phone": "16616666666","verify_code": "A424ED4BD3A7D6AEA720B86D4A360F75","status_code": 200,"code": "200"},
+    {"desc": "手机号和验证码不匹配，登录失败","phone": "16616666666","verify_code": "123456","status_code": 200,"code": "400","text": "短信验证码错误!"},
+    {"desc": "手机号为空，登录失败","phone": "","verify_code": "","status_code": 200,"code": "400","text": "手机号不能为空!"},
+    {"desc": "验证码为空，登录失败","phone": "17817357310","verify_code": "","status_code": 200,"code": "400","text": "短信验证码不能为空!"}
+  ]
+}

@@ -24,8 +24,9 @@ def init_log_config():
     # 创建控制台处理器
     sh = logging.StreamHandler()
     # 创建文件处理器
-    log_file = base_path+'/log/log_{}.log'.format(time.strftime("%Y-%m-%d %H-%M-%S"))
-    fh = logging.handlers.TimedRotatingFileHandler(filename=log_file, when='M', interval=1, backupCount=3)
+    # log_file = base_path+'/log/log_{}.log'.format(time.strftime("%Y-%m-%d %H-%M-%S"))
+    log_file = base_path + '/log/newyea-app-api.log'
+    fh = logging.handlers.TimedRotatingFileHandler(filename=log_file, when='M', interval=1, backupCount=3, encoding='utf-8')
 
     # 创建格式化器
     fms = "%(levelname)s %(filename)s %(lineno)d %(asctime)s %(message)s"
